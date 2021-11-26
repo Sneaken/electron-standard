@@ -1,0 +1,11 @@
+appId: com.example.app
+productName: Sneaken's utils
+mac:
+  target:
+    target: dmg
+nsis:
+  oneClick: false
+  perMachine: true
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: false
