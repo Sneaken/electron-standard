@@ -1,0 +1,45 @@
+{
+  "name": "electron-standard",
+  "version": "1.0.1",
+  "repository": "git@github.com:Sneaken/electron-standard.git",
+  "author": "Sneaken <924393527@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^13.2.0",
+    "@commitlint/config-conventional": "^13.2.0",
+    "@craco/craco": "^6.3.0",
+    "chalk": "^4.1.2",
+    "commitizen": "^4.2.4",
+    "conventional-changelog-cli": "^2.1.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "enquirer": "^2.3.6",
+    "execa": "^5.1.1",
+    "eslint": "^7.30.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "minimist": "^1.2.5",
+    "prettier": "^2.4.1",
+    "semver": "^7.3.5"
+  },
+  "scripts": {
+    "release": "node scripts/release.js",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "commit": "git-cz",
+    "prepare": "husky install",
+    "build": "cd webview && yarn build:webview && cd ../electron && yarn build:dev"
+  },
+  "lint-staged": {
+    "!(docs/**/*).js": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "eslint",
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

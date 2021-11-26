@@ -1,6 +1,6 @@
 {
   "name": "electron-container",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "app/main/index.js",
   "scripts": {
