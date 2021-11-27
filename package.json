@@ -29,7 +29,7 @@
     "build": "cd webview && yarn build:webview && cd ../electron && yarn build:dev"
   },
   "lint-staged": {
-    "!(docs/**/*).js": [
+    "!(electron/app/**/*).js": [
       "prettier --write"
     ],
     "electron/**/*.ts": [
