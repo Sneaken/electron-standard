@@ -32,7 +32,10 @@
     "!(docs/**/*).js": [
       "prettier --write"
     ],
-    "*.ts?(x)": [
+    "electron/**/*.ts": [
+      "prettierw --parser=typescript --write"
+    ],
+    "webview/**/*.ts?(x)": [
       "eslint",
       "prettier --parser=typescript --write"
     ]
